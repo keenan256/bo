@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* General styles */
 body {
     font-family: Arial, Helvetica, sans-serif ;
@@ -131,7 +133,7 @@ hr.vertical {
     float: right;
 }
 
-
+/* Member Page Styles */
 .member-detail {
     margin-top: 20px;
 }
@@ -139,7 +141,6 @@ hr.vertical {
 .member-info {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap; 
 }
 
 .member-photo {
@@ -197,32 +198,4 @@ hr.vertical {
 
 h6 {
     color: #ffffff;
-}
-
-
-@media (max-width: 768px) {
-    .member-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .member-photo, .business-about {
-        width: 100%;
-    }
-
-    .member-photo {
-        margin-bottom: 20px;
-    }
-
-    .business-about .button {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    .business-about img {
-        width: 7cm;
-        display: block;
-        margin: 0 auto;
-    }
 }
