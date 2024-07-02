@@ -217,4 +217,11 @@ h6 {
     .business-about {
         margin-top: 20px;
     }
+    .business-about p {
+    font-size: x-large;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #cf2030;
+    width: 100%;
+    }    
 }
