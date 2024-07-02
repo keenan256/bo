@@ -132,7 +132,7 @@ hr.vertical {
 }
 
 /* Member Page Styles */
-@media (min-width: 601px) {
+@media (min-width: 801px) {
 .member-detail {
     margin-top: 20px;
 }
@@ -200,7 +200,7 @@ h6 {
 }
 }
 /* Media Query for Phones */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .member-info {
         display: flex;
         flex-direction: column;
