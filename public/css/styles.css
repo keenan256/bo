@@ -206,7 +206,7 @@ h6 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 100%;
+        width: 50%;
         padding: 0 10px;
     }
     .member-photo {
@@ -235,12 +235,12 @@ h6 {
     line-height: 1.6;
     margin-bottom: 20px;
     color: #cf2030;
-    width: 100%;
+    width: 50%;
     text-align: center;
     } 
 
     .member-photo, .business-about {
-        width: 100%; /* Full width on mobile */
+        width: 50%; /* Full width on mobile */
         text-align: center;
         padding: 10px;
     }
