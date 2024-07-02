@@ -209,7 +209,7 @@ h6 {
     }
 
     .member-photo, .business-about {
-        width: 100%; /* Full width on mobile */
+        width: 85%; /* Full width on mobile */
         text-align: center;
         padding: 10px;
     }
