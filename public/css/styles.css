@@ -240,7 +240,7 @@ h6 {
     } 
 
     .member-photo, .business-about {
-        width: 50%; /* Full width on mobile */
+        width: 100%; /* Full width on mobile */
         text-align: center;
         padding: 10px;
     }
