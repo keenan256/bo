@@ -244,6 +244,13 @@ h6 {
         text-align: center;
         padding: 10px;
     }
+
+    .member-photo {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    
     .member-name-title {
     color: #cf2030;
     border-radius: 0 0 10px 10px;
