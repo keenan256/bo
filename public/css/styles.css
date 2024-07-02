@@ -224,5 +224,11 @@ h6 {
     color: #cf2030;
     width: 100%;
     text-align: center;
+    } 
+    .member-name-title {
+    color: #cf2030;
+    border-radius: 0 0 10px 10px;
+    margin-top: -10px;
     }    
+}
 }
