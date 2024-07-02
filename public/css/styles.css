@@ -206,11 +206,11 @@ h6 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 50%;
+        width: 100%;
         padding: 0 10px;
     }
     .member-photo {
-    width: 50%;
+    width: 100%;
     padding: 20px;
     text-align: center;
     background-color: rgb(249, 248, 248);
@@ -221,7 +221,7 @@ h6 {
     }
 
     .member-photo, .business-about {
-        width: 50%; /* Full width on mobile */
+        width: 100%; /* Full width on mobile */
         text-align: center;
         padding: 20px;
     }
@@ -235,7 +235,7 @@ h6 {
     line-height: 1.6;
     margin-bottom: 20px;
     color: #cf2030;
-    width: 50%;
+    width: 100%;
     text-align: center;
     } 
 
