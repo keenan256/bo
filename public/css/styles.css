@@ -205,11 +205,13 @@ h6 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Center text on mobile */
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .member-photo, .business-about {
-        width: 85%; /* Full width on mobile */
+        width: 100%; /* Full width on mobile */
         text-align: center;
         padding: 10px;
     }
@@ -217,6 +219,7 @@ h6 {
     .business-about {
         margin-top: 20px;
     }
+    
     .business-about p {
     font-size: x-large;
     line-height: 1.6;
@@ -225,6 +228,12 @@ h6 {
     width: 100%;
     text-align: center;
     } 
+
+    .member-photo, .business-about {
+        width: 100%; /* Full width on mobile */
+        text-align: center;
+        padding: 10px;
+    }
     .member-name-title {
     color: #cf2030;
     border-radius: 0 0 10px 10px;
