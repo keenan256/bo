@@ -220,8 +220,13 @@ h6 {
     image-resolution: 1800px;
     }
 
+    .member-photo img {
+    width: 60%;
+    height: auto;
+    }
+    
     .member-photo, .business-about {
-        width: 100%; /* Full width on mobile */
+        width: 100%; 
         text-align: center;
         padding: 20px;
     }
@@ -243,12 +248,6 @@ h6 {
         width: 100%; /* Full width on mobile */
         text-align: center;
         padding: 10px;
-    }
-
-    .member-photo {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
     }
     
     .member-name-title {
