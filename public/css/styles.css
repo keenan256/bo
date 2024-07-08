@@ -325,10 +325,10 @@ header .logo span {
 
 .contact-buttons {
     display: flex;
-    gap: 20px; 
+    gap: 80px; 
 }
 
-.contact-button {
+.contact-buttons {
     font-size: 1.2em; 
     font-weight: bold;
     color: #cf2030;
@@ -337,6 +337,6 @@ header .logo span {
     transition: color 0.3s;
 }
 
-.contact-button:hover {
+.contact-buttons:hover {
     color: #ab7f18;
 }
