@@ -336,7 +336,4 @@ header .logo span {
     padding: 0.5em 1em;
     transition: color 0.3s;
 }
-
-.contact-buttons:hover {
-    color: #ab7f18;
 }
