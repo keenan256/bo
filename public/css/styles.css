@@ -147,7 +147,7 @@ hr.vertical {
     padding: 20px;
     text-align: center;
     background-color: rgb(249, 248, 248);
-    border: 1px solid #cf2030;
+    border: 3px solid #cf2030;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     image-resolution: 1800px;
