@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BNI Sunrise</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/bni icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://bniuganda.com/kampala-bni-sunrise/en-US/index" target="_blank">
+                <img src="images/bni logo.jpeg" alt="BNI Logo">
+                <b><span>SUNRISE</span></b>
+            </a>
+        </div>
+        <div class="nav-buttons">
+            <a href="contact.html" class="button">Contact Us</a>
+            <a href="http://bniuganda.com/kampala-bni-sunrise/en-US/index" class="button" target="_blank">Chapter Website</a>
+        </div>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="send_email.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 BNI Sunrise - Business Owners Power Team</p>
+    </footer>
+</body>
+</html>
