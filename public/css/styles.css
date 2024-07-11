@@ -262,9 +262,9 @@ h6 {
 .contact-form-section {
     background: #f8f6f6;
     color: #cf2030;
-    padding: 20em;
+    padding: 2em;
     border-radius: 10px;
-    border: 5px solid
+    border: 5px solid white;
     max-width: 600px;
     margin: 2em auto;
     text-align: center;
