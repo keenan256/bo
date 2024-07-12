@@ -272,7 +272,7 @@ h6 {
     color: white;
     padding: 2em;
     border-radius: 10px;
-    border: 5px solid white;
+    border: 5px double white;
     max-width: 600px;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
