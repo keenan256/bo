@@ -24,8 +24,7 @@
             <h1>Contact form</h1>
             <hr>
             <p>Please fill in your information and we'll be in touch shortly.</p>
-            <form class="contact-form" action="contact.php" method="post" enctype="text/plain">
-            <form action="contact.php" method="post">
+            <form class="contact-form">
             <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -49,6 +48,23 @@
                 <button type="submit" class="submit-button">Submit Form</button>
             </form>
         </div>
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+    
+                const formData = new FormData(event.target);
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    body: formData
+                });
+    
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent.');
+                } else {
+                    alert('Oops! Something went wrong, and we couldn\'t send your message.');
+                }
+            });
+        </script>
     </section>
     <footer>
         <p>&copy; 2023 BNI Sunrise. All rights reserved.</p>
