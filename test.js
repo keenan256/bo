@@ -5,13 +5,13 @@ const testEmail = async () => {
         const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: 'psanjiv24@gmail.com',
-                pass: 'Akiiki256',
+                user: 'kakiiki256@gmail.com',
+                pass: 'bndv qmsu qukb qwpr',
             },
         });
 
         const mailOptions = {
-            from: 'psanjiv24@gmail.com',
+            from: 'kakiiki256@gmail.com',
             to: 'kakiiki256@gmail.com',
             subject: `New contact from Test`,
             text: `Name: Test\nCompany: Test Company\nEmail: test@example.com\nPhone: 1234567890\nMessage: Hello, this is a test message.`,
