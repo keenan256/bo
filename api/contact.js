@@ -1,6 +1,8 @@
+const { json } = require('micro');
 const nodemailer = require('nodemailer');
+const cors = require('micro-cors')();
 
-module.exports = async (req, res) => {
+module.exports = cors(async (req, res) => {
     console.log('Received a request at /api/contact');
 
     if (req.method !== 'POST') {
@@ -9,7 +11,8 @@ module.exports = async (req, res) => {
     }
 
     try {
-        const { name, company, email, phone, message } = req.body;
+        const body = await json(req);
+        const { name, company, email, phone, message } = body;
         console.log('Form data received:', { name, company, email, phone, message });
 
         if (!name || !email || !phone || !message) {
@@ -20,8 +23,8 @@ module.exports = async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: process.env.GMAIL_USER,  // Use environment variables
-                pass: process.env.GMAIL_PASS,  // Use environment variables
+                user: process.env.GMAIL_USER,  // Your email here
+                pass: process.env.GMAIL_PASS,  // Your app password here
             },
         });
 
@@ -38,6 +41,6 @@ module.exports = async (req, res) => {
 
     } catch (error) {
         console.error('Error in API handler:', error);
-        res.status(500).send({ message: 'Oops! Something went wrong, and we couldn\'t send your message.' });
+        res.status(500).send({ message: 'Oops! Something went wrong, and we couldn\'t send your message.', error: error.toString() });
     }
-};
+});
