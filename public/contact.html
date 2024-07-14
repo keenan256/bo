@@ -53,7 +53,7 @@
                 event.preventDefault();
     
                 const formData = new FormData(event.target);
-                const response = await fetch('/api/contact', {
+                const response = await fetch('/api/contact.js', {
                     method: 'POST',
                     body: formData
                 });
