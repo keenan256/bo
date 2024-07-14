@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BNI Sunrise</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <header>
+        <div class="logo">
+            <a href="http://bniuganda.com/en-US/index" target="_blank">
+                <img src="images/bni logo.jpeg" alt="BNI Logo">
+            <span><b>SUNRISE</b></span>
+            </a>
+        </div>
+    </header>
+   <section class="contact-form-section">
+        <div class="form-container">
+            <h1>Contact form</h1>
+            <p>Please fill in your information and we'll be in touch shortly.</p>
+            <form class="contact-form" action="mailto:recipient@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Form</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 BNI Sunrise. All rights reserved.</p>
+    </footer>
+</body>
+</html>
