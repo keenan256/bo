@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
     console.log('Received a request at /api/contact');
 
     if (req.method !== 'POST') {
