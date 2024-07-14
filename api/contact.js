@@ -5,7 +5,7 @@ export default async (req, res) => {
         return res.status(405).send({ message: 'Only POST requests allowed' });
     }
 
-    const { name, company, email, phone, message } = Object.fromEntries(req.body.entries());
+    const { name, company, email, phone, message } = req.body;
 
     if (!name || !email || !phone || !message) {
         return res.status(400).send({ message: 'Please complete the form and try again.' });

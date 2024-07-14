@@ -5,28 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - BNI Sunrise</title>
     <link rel="stylesheet" href="css/styles.css">
-   <style>
+    <style>
         body {background : url(images/bni\ background.jpg);}
-       hr {display:block; height: 5px; border:0; border-top: 3px solid #B31725;}
+        hr {display:block; height: 5px; border:0; border-top: 3px solid #B31725;}
     </style>
 </head>
 <body>
-     <header>
+    <header>
         <div class="logo">
             <a href="http://bniuganda.com/en-US/index" target="_blank">
                 <img src="images/bni logo.jpeg" alt="BNI Logo">
-            <span><b>SUNRISE</b></span>
+                <span><b>SUNRISE</b></span>
             </a>
         </div>
     </header>
-   <section class="contact-form-section">
+    <section class="contact-form-section">
         <div class="form-container">
             <h1>Contact form</h1>
             <hr>
             <p>Please fill in your information and we'll be in touch shortly.</p>
-            <form class="contact-form">
-            <form action="/api/contact.js" method="post">
-            <div class="form-group">
+            <form id="contactForm" class="contact-form" action="/api/contact" method="post">
+                <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
