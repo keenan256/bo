@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 export default async (req, res) => {
     console.log('Received a request at /api/contact');
-    
+
     if (req.method !== 'POST') {
         console.log('Invalid request method:', req.method);
         return res.status(405).send({ message: 'Only POST requests allowed' });
@@ -20,16 +20,16 @@ export default async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_PASS
-            }
+                user: process.env.GMAIL_USER,  // Your email here
+                pass: process.env.GMAIL_PASS,  // Your app password here
+            },
         });
 
         const mailOptions = {
-            from: email,
-            to: 'kakiiki256@gmail.com',
+            from: email,  // The sender's email address
+            to: 'kakiiki256@gmail.com',  // The recipient email address
             subject: `New contact from ${name}`,
-            text: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`
+            text: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`,
         };
 
         const info = await transporter.sendMail(mailOptions);
