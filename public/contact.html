@@ -52,16 +52,30 @@
         <script>
             document.getElementById('contactForm').addEventListener('submit', async function(event) {
                 event.preventDefault();
-    
-                const formData = new FormData(event.target);
-                const response = await fetch('/api/contact.js', {
-                    method: 'POST',
-                    body: formData
-                });
-    
-                if (response.ok) {
-                    alert('Thank you! Your message has been sent.');
-                } else {
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    company: document.getElementById('company').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                };
+
+                try {
+                    const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                    });
+
+                    if (response.ok) {
+                        alert('Thank you! Your message has been sent.');
+                    } else {
+                        alert('Oops! Something went wrong, and we couldn\'t send your message.');
+                    }
+                } catch (error) {
                     alert('Oops! Something went wrong, and we couldn\'t send your message.');
                 }
             });
