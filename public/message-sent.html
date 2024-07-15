@@ -12,15 +12,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 80vh;
             padding: 20px;
+        }
+        .message-sent-box p{
+            font-size: 1cm;
         }
         .message-sent-box {
             background: url(images/bni\ background.jpg);
             color: white;
             padding: 2em;
-            border: 2px double, aliceblue;
+            border-color: azure;
             border-radius: 10px;
+            border-style: double;
             text-align: center;
             max-width: 600px;
             width: 100%;
@@ -29,6 +33,7 @@
         .message-sent-box h1 {
             font-size: 2em;
             margin-bottom: 0.5em;
+            margin-top: 0.2em;
             font-weight: bold;
         }
         .message-sent-box button {
@@ -52,6 +57,7 @@
     <div class="message-sent-container">
         <div class="message-sent-box">
             <h1>Thank you!</h1>
+            <hr class="rounded">
             <p>Your message has been sent.</p>
             <button onclick="window.location.href='index.html'">Back to Home Page</button>
         </div>
