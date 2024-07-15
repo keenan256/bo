@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/bni icon.png" type="image/x-icon">
     <style>
-        body {background : url(images/bni\ background.jpg);}
-        hr {display:block; height: 5px; border:0; border-top: 3px solid #B31725;}
+        body {background: url(images/bni\ background.jpg);}
+        hr {display: block; height: 5px; border: 0; border-top: 3px solid #B31725;}
+        .thank-you-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .thank-you-message {
+            background: #cf2030;
+            color: white;
+            padding: 2em;
+            border-radius: 10px;
+            border: 5px double white;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .thank-you-message h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        .thank-you-message img {
+            width: 50px;
+            margin-bottom: 1em;
+        }
     </style>
 </head>
 <body>
@@ -49,40 +75,51 @@
                 <button type="submit" class="submit-button">Submit Form</button>
             </form>
         </div>
-        <script>
-            document.getElementById('contactForm').addEventListener('submit', async function(event) {
-                event.preventDefault();
-
-                const formData = {
-                    name: document.getElementById('name').value,
-                    company: document.getElementById('company').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    message: document.getElementById('message').value,
-                };
-
-                try {
-                    const response = await fetch('/api/contact', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData),
-                    });
-
-                    if (response.ok) {
-                        alert('Thank you! Your message has been sent.');
-                    } else {
-                        alert('Oops! Something went wrong, and we couldn\'t send your message.');
-                    }
-                } catch (error) {
-                    alert('Oops! Something went wrong, and we couldn\'t send your message.');
-                }
-            });
-        </script>
     </section>
     <footer>
         <p>&copy; 2023 BNI Sunrise. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value,
+            };
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (response.ok) {
+                    displayThankYouMessage();
+                } else {
+                    alert('Oops! Something went wrong, and we couldn\'t send your message.');
+                }
+            } catch (error) {
+                alert('Oops! Something went wrong, and we couldn\'t send your message.');
+            }
+        });
+
+        function displayThankYouMessage() {
+            const formContainer = document.querySelector('.form-container');
+            formContainer.innerHTML = `
+                <div class="thank-you-message">
+                    <img src="images/mail-icon.png" alt="Mail Icon"> <!-- Add a relevant icon here -->
+                    <h1>Thank you!</h1>
+                    <p>Your message has been sent.</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
