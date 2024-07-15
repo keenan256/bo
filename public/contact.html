@@ -9,26 +9,6 @@
     <style>
         body {background: url(images/bni\ background.jpg) no-repeat center center fixed; background-size: cover;}
         hr {display: block; height: 5px; border: 0; border-top: 3px solid #B31725;}
-        .thank-you-container, .contact-form-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .thank-you-message, .form-container {
-            color: white;
-            padding: 2em;
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .thank-you-message h1, .form-container h1 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -71,7 +51,7 @@
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 BNI Sunrise. All rights reserved.</p>
+        <p>&copy; 2023 BNI Sunrise. All rights reserved.</p>
     </footer>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
@@ -95,7 +75,7 @@
                 });
 
                 if (response.ok) {
-                    displayThankYouMessage();
+                    window.location.href = 'message-sent.html';
                 } else {
                     alert('Oops! Something went wrong, and we couldn\'t send your message.');
                 }
@@ -103,16 +83,6 @@
                 alert('Oops! Something went wrong, and we couldn\'t send your message.');
             }
         });
-
-        function displayThankYouMessage() {
-            const formContainer = document.querySelector('.form-container');
-            formContainer.innerHTML = `
-                <div class="thank-you-message">
-                    <h1>Thank you!</h1>
-                    <p>Your message has been sent.</p>
-                </div>
-            `;
-        }
     </script>
 </body>
 </html>
