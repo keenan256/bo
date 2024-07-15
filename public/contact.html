@@ -7,33 +7,29 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/bni icon.png" type="image/x-icon">
     <style>
-        body {background: url(images/bni\ background.jpg);}
+        body {background: url(images/bni\ background.jpg) no-repeat center center fixed; background-size: cover;}
         hr {display: block; height: 5px; border: 0; border-top: 3px solid #B31725;}
-        .thank-you-container {
+        .thank-you-container, .contact-form-section {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
-        .thank-you-message {
-            background: #cf2030;
+        .thank-you-message, .form-container {
+            background: rgba(207, 32, 48, 0.9); /* Semi-transparent background */
             color: white;
             padding: 2em;
             border-radius: 10px;
-            border: 5px double white;
             text-align: center;
             max-width: 600px;
             width: 100%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .thank-you-message h1 {
+        .thank-you-message h1, .form-container h1 {
             font-size: 2em;
             margin-bottom: 0.5em;
             font-weight: bold;
-        }
-        .thank-you-message img {
-            width: 50px;
-            margin-bottom: 1em;
         }
     </style>
 </head>
@@ -114,7 +110,6 @@
             const formContainer = document.querySelector('.form-container');
             formContainer.innerHTML = `
                 <div class="thank-you-message">
-                    <img src="public\images\mail icon.png" alt="Mail Icon"> 
                     <h1>Thank you!</h1>
                     <p>Your message has been sent.</p>
                 </div>
