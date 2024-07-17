@@ -278,7 +278,9 @@ h6 {
         background: #f8f6f6;
         color: #cf2030;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         padding: 1em 2em;
         border-bottom: 5px solid #cf2030;
@@ -286,6 +288,12 @@ h6 {
     
     header .logo img {
         height: 40px;
+    }
+    
+    header .logo{
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
     }
     
     header .logo span {
