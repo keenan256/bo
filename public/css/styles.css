@@ -199,6 +199,8 @@ h6 {
     color: #ffffff;
 }
 }
+
+
 /* Media Query for Phones */
 @media (max-width: 800px) {
     .member-info {
@@ -254,7 +256,45 @@ h6 {
     color: #cf2030;
     border-radius: 0 0 10px 10px;
     margin-top: -10px;
-    }    
+    } 
+
+    .contact-buttons {
+        font-size: 0.3em; 
+        font-weight: bold;
+        color: #cf2030;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        transition: color 0.3s;
+        margin-left: 1cm;
+    }
+
+    .contact-buttons {
+        display: flex;
+        gap: 40px; 
+    }
+
+    header .logo img {
+        height: 40px;
+        margin-left: 0cm;
+    }
+
+    header {
+        background: #f8f6f6;
+        color: #cf2030;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+        border-bottom: 5px solid #cf2030;
+        margin-left: 0;
+    }
+    header .logo span {
+        margin-left: 0px;
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+       
 }
 
 /* Contact Form Styles */
@@ -365,11 +405,8 @@ header .logo span {
     font-size: 1.2em; 
     font-weight: bold;
     color: #cf2030;
+    text-align: center;
     text-decoration: none;
     padding: 0.5em 1em;
     transition: color 0.3s;
-}
-
-.member-detail body{
-    background:url(images/white\ bni\ background.png);
 }
