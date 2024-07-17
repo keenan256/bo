@@ -370,3 +370,6 @@ header .logo span {
     transition: color 0.3s;
 }
 
+.member-detail body{
+    background:url(images/white\ bni\ background.png);
+}
