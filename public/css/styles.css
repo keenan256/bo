@@ -14,6 +14,7 @@ header {
     align-items: center;
     padding: 1em 2em;
     border-bottom: 5px solid #cf2030;
+    position: relative; 
 }
 
 header .logo img {
@@ -302,11 +303,12 @@ h6 {
         background: #f8f6f6;
         width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; 
     }
 
     .menu li {
         display: block;
-        text-align: right;
+        text-align: center; 
     }
 
     .menu a {
