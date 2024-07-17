@@ -25,6 +25,37 @@ header .logo span {
     font-size: 1.2em;
 }
 
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #cf2030;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: color 0.3s;
+}
+
 main {
     padding: 2em;
     text-align: center;
@@ -258,74 +289,33 @@ h6 {
     margin-top: -10px;
     } 
 
-    .contact-buttons {
-        font-size: 0.3em; 
-        font-weight: bold;
-        color: #cf2030;
-        text-align: center;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        transition: color 0.3s;
-        margin-left: 1cm;
+    .menu-icon {
+        display: block;
     }
 
-    .contact-buttons {
-        display: flex;
-        gap: 40px; 
-    }
-
-    header {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
         background: #f8f6f6;
-        color: #cf2030;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 1em 2em;
-        border-bottom: 5px solid #cf2030;
-    }
-    
-    header .logo img {
-        height: 40px;
-    }
-    
-    header .logo{
-        flex: 1 1 100%;
-        text-align: center;
-        margin-bottom: 0.5em;
-    }
-    
-    header .logo span {
-        margin-left: 0px;
-        font-size: 1.2em;
-    }
-    
-    .contact-buttons {
-        display: flex;
-        gap: 2em;
-    }
-    
-    .contact-button {
-        font-size: 1.2em; 
-        font-weight: bold;
-        color: #cf2030;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        transition: color 0.3s;
-    }
-
-    .contact-buttons {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 0.5em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .contact-button {
-        flex: 1 1 auto;
-        text-align: center;
+    .menu li {
+        display: block;
+        text-align: right;
+    }
+
+    .menu a {
+        display: block;
+        padding: 1em 2em;
+    }
+
+    .menu.show {
+        display: flex;
     }
        
 }

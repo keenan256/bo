@@ -15,3 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('Document fully loaded and parsed.');
 });
 
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+}
