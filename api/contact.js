@@ -30,7 +30,7 @@ module.exports = cors(async (req, res) => {
 
         const mailOptions = {
             from: email,  // The sender's email address
-            to: 'kakiiki256@gmail.com',  // The recipient email address
+            to: 'bopt.bnisunrise@gmail.com',  // The recipient email address
             subject: `New contact from ${name}`,
             text: `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`,
         };
